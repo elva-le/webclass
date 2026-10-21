@@ -1,0 +1,449 @@
+:root {
+  --ink: #2b2523;
+  --paper: #fdfcfc;
+  --muted: #5e5753;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* 图片路径配置（将图片放入 images/ 文件夹即可） */
+  --hero-img: url(images/4.png);
+  --street-img: url(images/3.webp);
+  --quiet-img: url(images/2.jpg);
+  --frame-1: url(images/1.jpg);
+  --frame-2: url(images/5.jpg);
+  --frame-3: url(images/6.jpg);
+
+  /* Planner & Table 色彩变量 */
+  --table-header-bg: #28332d;
+  --accent-red: #aa4b41;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid #8a5a6a;
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 24px;
+}
+
+/* Header & Navigation */
+header {
+  border-top: 3px solid #111;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .12);
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -.01em;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+  align-items: center;
+}
+
+nav a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: opacity .2s ease;
+}
+
+nav a:hover {
+  opacity: .7;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 514px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(18,22,36,.85) 0%, rgba(18,22,36,.45) 55%, rgba(18,22,36,.2) 100%), var(--hero-img);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .wrap {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(56px, 9vw, 100px);
+  line-height: 1.04;
+  letter-spacing: -.015em;
+  margin: 28px 0 26px;
+}
+
+.rule {
+  width: 52px;
+  height: 1px;
+  background: rgba(255, 255, 255, .8);
+  margin-bottom: 26px;
+}
+
+.hero p {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, .95);
+}
+
+/* 01 Discover */
+.discover {
+  padding: 88px 0 110px;
+}
+
+.discover h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin: 22px 0 46px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.grid h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.grid p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 22px;
+  max-width: 480px;
+}
+
+blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--muted);
+  margin-top: 28px;
+}
+
+.photo {
+  aspect-ratio: 3 / 2.04;
+  border-radius: 4px;
+  background: var(--street-img) center / cover;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+}
+
+/* 02 Neighborhoods */
+.neighborhoods {
+  padding: 20px 0 110px;
+}
+
+.neighborhoods h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin: 22px 0 36px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  align-items: start;
+}
+
+.split .photo-lg {
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  background: var(--quiet-img) center / cover;
+}
+
+.split h3 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 6px 0 20px;
+}
+
+.split p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+/* 03 Travel Planner Section */
+.planner {
+  padding: 20px 0 100px;
+}
+
+.planner-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.planner-header-bar {
+  margin-bottom: 26px;
+}
+
+.planner-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(32px, 4.5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.budget-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.planner-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* 满足要求的 CSS 表格属性：padding, border-collapse, border-spacing */
+.custom-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 14px;
+}
+
+.custom-table th {
+  background-color: var(--table-header-bg);
+  color: #ffffff;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: .05em;
+  vertical-align: middle;
+}
+
+.custom-table td {
+  height: 52px;
+  padding: 0 20px;
+  background-color: #faf9f6;
+  color: #2b2523;
+  vertical-align: middle;
+}
+
+.custom-table td.side-col {
+  background-color: #ebe7e0;
+  font-weight: 700;
+}
+
+.custom-table tbody tr:nth-child(even) td:not(.side-col) {
+  background-color: #f4f2ed;
+}
+
+.custom-table td.highlight {
+  background-color: #f7ebe6;
+  color: var(--accent-red);
+  font-weight: 700;
+  text-align: center;
+}
+
+.custom-table .text-right {
+  text-align: right;
+}
+
+/* 04 Photo Journal */
+.journal {
+  padding: 20px 0 90px;
+}
+
+.journal h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin: 22px 0 36px;
+}
+
+.journal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.journal-head p {
+  max-width: 230px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.frames {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 4px;
+  overflow: hidden;
+  background: center / cover;
+}
+
+.frame:nth-child(1) { background-image: var(--frame-1); }
+.frame:nth-child(2) { background-image: var(--frame-2); }
+.frame:nth-child(3) { background-image: var(--frame-3); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(15,18,30,.88), rgba(15,18,30,.25));
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.frame:hover .overlay,
+.frame:focus .overlay,
+.frame:focus-within .overlay {
+  opacity: 1;
+}
+
+.overlay h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.overlay p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .9);
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+/* 响应式断点 */
+@media (max-width: 760px) {
+  nav { gap: 18px; }
+  .hero { min-height: 440px; }
+  .grid, .split { grid-template-columns: 1fr; gap: 36px; }
+  .journal-head { flex-direction: column; align-items: flex-start; gap: 0; }
+  .frames { grid-template-columns: 1fr; }
+  .planner-card { padding: 24px 16px; }
+  .custom-table { min-width: 580px; }
+}
+
+@media (max-width: 480px) {
+  nav a:not(:first-child) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .overlay { transition: none; }
+}

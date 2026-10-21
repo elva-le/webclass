@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taipei — A City of Contrasts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- 引入外部样式表 style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#">TAIPEI.</a>
+      <nav aria-label="Main">
+        <a href="#discover">Discover</a>
+        <a href="#neighborhoods">Neighborhoods</a>
+        <a href="#planner">Planner</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A visual journey through Taiwan</p>
+      <h1>A City of<br>Contrasts.</h1>
+      <div class="rule"></div>
+      <p>Ancient temples, bustling night markets, and green mountain trails. Discover a different side of Taipei.</p>
+    </div>
+  </section>
+
+  <!-- 01 Discover -->
+  <section class="discover" id="discover">
+    <div class="wrap">
+      <p class="section-label">01 / Discover</p>
+      <h2>Where tradition meets tomorrow.</h2>
+      <div class="grid">
+        <div>
+          <h3>More than a destination</h3>
+          <p>Taipei is a city that never stops surprising you. One moment, you are standing beneath the towering Taipei 101 amid vibrant urban avenues. A short walk away, you will find incense smoke rising quietly from century-old temple eaves.</p>
+          <p>What makes Taipei unforgettable is the harmony of nostalgia and vibrant innovation. Every alleyway, coffee shop, and night market stall has its own story to tell.</p>
+          <blockquote>“The best way to explore Taipei is to follow the aroma of street food.”</blockquote>
+        </div>
+        <div class="photo" role="img" aria-label="Bustling street scene with Taipei 101 in background"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Neighborhoods -->
+  <section class="neighborhoods" id="neighborhoods">
+    <div class="wrap">
+      <p class="section-label">02 / Neighborhoods</p>
+      <h2>Slow down. Look closer.</h2>
+      <div class="split">
+        <div class="photo-lg" role="img" aria-label="Historic red brick street in Dadaocheng"></div>
+        <div>
+          <h3>The historic rhythm</h3>
+          <p>Beyond the bustling metro stations and commercial hubs, Taipei preserves charming, tranquil corners. Historic shopfronts in Dadaocheng, leafy lanes around Yongkang Street, and riverside promenades welcome travelers to slow their pace.</p>
+          <p>Spend a quiet afternoon exploring without a fixed schedule. Take in the details: warm tea aromas, traditional herbal medicine drawers, red lanterns, and the genuine hospitality found at every corner.</p>
+          <p>Often the most treasured memories are made in the small lanes you wandered into by chance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Planner Section -->
+  <section class="planner" id="planner">
+    <div class="wrap">
+      <p class="section-label">03 / TRAVEL PLANNER</p>
+      
+      <div class="planner-card">
+        <!-- 3-Day Travel Itinerary -->
+        <div class="planner-header-bar">
+          <h2 class="planner-title">Three Days in Taipei.</h2>
+          <p class="planner-subtitle">Plan your mornings, afternoons, and evenings with this simple three–day itinerary.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="custom-table itinerary-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Day</th>
+                <th style="width: 25%;">Morning</th>
+                <th style="width: 25%;">Afternoon</th>
+                <th style="width: 25%;">Evening</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="side-col">Day 1</td>
+                <td>Longshan Temple</td>
+                <td>Dadaocheng / Dihua St.</td>
+                <td>Shilin Night Market</td>
+              </tr>
+              <tr>
+                <td class="side-col">Day 2</td>
+                <td>Chiang Kai-shek Memorial</td>
+                <td>Songshan Cultural Park</td>
+                <td>Xiangshan & Taipei 101</td>
+              </tr>
+              <tr>
+                <td class="side-col">Day 3</td>
+                <!-- 使用 colspan 水平合并两列展示近郊一日游 -->
+                <td colspan="2" class="highlight">Jiufen & Pingxi Day Trip</td>
+                <td>Raohe Night Market</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Travel Budget Table -->
+        <div class="planner-header-bar" style="margin-top: 48px;">
+          <h3 class="budget-title">Travel Budget</h3>
+          <p class="planner-subtitle">A sample budget for transportation and meals in Taipei.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="custom-table budget-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Category</th>
+                <th style="width: 45%;">Item</th>
+                <th style="width: 30%; text-align: right;">Estimated Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- 使用 rowspan 垂直合并两行 -->
+                <td rowspan="2" class="side-col">Transportation</td>
+                <td>Taipei Metro (MRT)</td>
+                <td class="text-right">NT$150</td>
+              </tr>
+              <tr>
+                <td>TRA Train / Bus</td>
+                <td class="text-right">NT$280</td>
+              </tr>
+              <tr>
+                <!-- 使用 rowspan 垂直合并两行 -->
+                <td rowspan="2" class="side-col">Food</td>
+                <td>Lunch (Beef Noodles)</td>
+                <td class="text-right">NT$220</td>
+              </tr>
+              <tr>
+                <td>Dinner (Night Market Snacks)</td>
+                <td class="text-right">NT$350</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Photo Journal -->
+  <section class="journal" id="gallery">
+    <div class="wrap">
+      <p class="section-label">04 / Photo Journal</p>
+      <div class="journal-head">
+        <h2>Taipei in three frames.</h2>
+        <p>Move your mouse over each photograph to reveal the story behind the image.</p>
+      </div>
+      <div class="frames">
+        <figure class="frame" tabindex="0" aria-label="Scooter rush hour on Taipei bridge">
+          <div class="overlay">
+            <h4>Scooter Waterfall</h4>
+            <p>The iconic pulse of Taipei's commuter rhythm across the bridge.</p>
+          </div>
+        </figure>
+        <figure class="frame" tabindex="0" aria-label="City skyline view from Elephant Mountain">
+          <div class="overlay">
+            <h4>Above the Skyline</h4>
+            <p>Looking out over Taipei 101 as golden twilight settles over the basin.</p>
+          </div>
+        </figure>
+        <figure class="frame" tabindex="0" aria-label="Red lantern lit alleys in Jiufen">
+          <div class="overlay">
+            <h4>Lantern Alley</h4>
+            <p>Warm red lanterns glowing through a misty mountain staircase.</p>
+          </div>
+        </figure>
+      </div>
+      <p class="hint">Hover over a photo to see the fade-in overlay effect</p>
+    </div>
+  </section>
+
+</body>
+</html>
