@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Task - Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    /* 表格主体样式 */
+    table {
+      width: 600px;
+      border-collapse: collapse; /* 合并边框 */
+      text-align: center;
+    }
+
+    /* 所有单元格通用的白色边框和内边距 */
+    th, td {
+      border: 2px solid #ffffff;
+      padding: 16px 20px;
+      font-size: 20px;
+    }
+
+    /* 表头和第一列（时间列）：深灰色背景，白字加粗 */
+    thead th, 
+    tbody th {
+      background-color: #444444;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* 课程内容单元格：浅灰背景，黑字加粗 */
+    tbody td {
+      background-color: #cccccc;
+      color: #111111;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Task</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1pm</th>
+        <td>Math</td>
+        <td>Science</td>
+        <td>Art</td>
+      </tr>
+      <tr>
+        <th>2pm</th>
+        <td>Science</td>
+        <td>Writing</td>
+        <td>Reading</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

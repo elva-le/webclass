@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 40px auto;
+      max-width: 600px;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    /* 罗马数字大写列表 */
+    ol.roman-list {
+      list-style-type: upper-roman;
+      padding-left: 30px;
+      font-size: 1.15rem;
+    }
+
+    ol.roman-list > li {
+      margin-bottom: 8px;
+    }
+
+    /* 实心方块项目符号列表 */
+    ul.square-list {
+      list-style-type: square;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      padding-left: 35px;
+      font-size: 1.1rem;
+    }
+
+    ul.square-list li {
+      margin-bottom: 4px;
+    }
+
+    /* 描述/定义列表 */
+    dl.definition-list {
+      margin-left: 15px;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    dl.definition-list dt {
+      font-weight: normal;
+      margin-top: 10px;
+    }
+
+    dl.definition-list dd {
+      margin-left: 45px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Task2</h1>
+
+  <ol class="roman-list">
+    <li>Chop potatoes into quarters</li>
+    <li>
+      Simmer in salted water for 15-20 minutes until tender
+      <ul class="square-list">
+        <li>1kg King Edward potatoes</li>
+        <li>100ml milk</li>
+        <li>50g salted butter</li>
+        <li>Freshly grated nutmeg</li>
+        <li>Salt and pepper to taste</li>
+      </ul>
+
+      <!-- 包含 Sashimi 和 Scale 的定义列表部分 -->
+      <ul class="square-list" style="margin-bottom: 0;">
+        <li>
+          Sashimi
+          <div style="margin-left: 35px; margin-top: 4px;">
+            Sliced raw fish served with condiments
+          </div>
+        </li>
+      </ul>
+
+      <dl class="definition-list">
+        <dt>Scale</dt>
+        <dd>A Device used to measure theweight of ingredients.</dd>
+        <dd>A technique by which the scales are removed from the skin of fish.</dd>
+      </dl>
+    </li>
+    <li>Heat milk, butter and nutmeg</li>
+    <li>Drain potatoes and mash</li>
+    <li>Mix in the milk texture</li>
+  </ol>
+
+</body>
+</html>

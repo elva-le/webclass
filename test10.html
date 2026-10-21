@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tokyo — A City of Contrasts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2523;
+    --paper: #fdfcfc;
+    --muted: #4a4340;
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    /* 换成你自己的图片：例如 url("hero.jpg") */
+    --hero-img: url(images/1.jpg);
+    --street-img: url(images/4.webp);
+    --quiet-img: url(images/2.jpg);
+    --frame-1: url(images/3.jpg);
+    --frame-2: url(images/5.jpg);
+    --frame-3: url(images/6.jpg);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid #8a5a6a; outline-offset: 3px; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .section-label { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+
+  /* Header */
+  header { border-top: 3px solid #111; background: var(--paper); position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 0 rgba(0,0,0,.12); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+  .logo { font-family: var(--serif); font-weight: 600; font-size: 26px; letter-spacing: -.01em; }
+  nav { display: flex; gap: 32px; }
+  nav a { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  nav a:hover { opacity: .6; }
+
+  /* Hero */
+  .hero {
+    min-height: 514px; color: #fff; display: flex; align-items: center;
+    background: linear-gradient(90deg, rgba(18,22,36,.85) 0%, rgba(18,22,36,.45) 55%, rgba(18,22,36,.2) 100%), var(--hero-img);
+    background-size: cover; background-position: center;
+  }
+  .hero .wrap { width: 100%; padding-top: 40px; padding-bottom: 40px; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+  .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(56px, 9vw, 100px); line-height: 1.04; letter-spacing: -.015em; margin: 28px 0 26px; }
+  .rule { width: 52px; height: 1px; background: rgba(255,255,255,.8); margin-bottom: 26px; }
+  .hero p { max-width: 400px; font-size: 16px; line-height: 1.85; color: rgba(255,255,255,.95); }
+
+  /* 01 Discover */
+  .discover { padding: 88px 0 110px; }
+  .discover h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5vw, 48px); line-height: 1.15; letter-spacing: -.01em; margin: 22px 0 46px; }
+  .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+  .grid h3 { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 22px; }
+  .grid p { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 22px; max-width: 480px; }
+  blockquote { font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--muted); margin-top: 28px; }
+  .photo { aspect-ratio: 3 / 2.04; border-radius: 4px; background: var(--street-img) center / cover; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+
+  /* 02 Neighborhoods */
+  .neighborhoods { padding: 20px 0 110px; }
+  .neighborhoods h2, .journal h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5vw, 48px); line-height: 1.15; letter-spacing: -.01em; margin: 22px 0 36px; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; align-items: start; }
+  .split .photo-lg { aspect-ratio: 3 / 2; border-radius: 4px; background: var(--quiet-img) center / cover; }
+  .split h3 { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin: 6px 0 20px; }
+  .split p { font-size: 14px; line-height: 1.85; color: var(--muted); margin-bottom: 20px; max-width: 420px; }
+
+  /* 03 Photo journal */
+  .journal { padding: 20px 0 90px; }
+  .journal-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
+  .journal-head p { max-width: 230px; font-size: 12px; line-height: 1.7; color: var(--muted); margin-bottom: 40px; }
+  .frames { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .frame { position: relative; aspect-ratio: 1 / 1.1; border-radius: 4px; overflow: hidden; background: center / cover; }
+  .frame:nth-child(1) { background-image: var(--frame-1); }
+  .frame:nth-child(2) { background-image: var(--frame-2); }
+  .frame:nth-child(3) { background-image: var(--frame-3); }
+  .overlay {
+    position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 22px; color: #fff; background: linear-gradient(to top, rgba(15,18,30,.88), rgba(15,18,30,.25));
+    opacity: 0; transition: opacity .35s ease;
+  }
+  .frame:hover .overlay, .frame:focus .overlay, .frame:focus-within .overlay { opacity: 1; }
+  .overlay h4 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin-bottom: 6px; }
+  .overlay p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,.9); }
+  .hint { font-size: 11px; color: var(--muted); margin-top: 20px; }
+
+  @media (max-width: 760px) {
+    nav { gap: 18px; }
+    .hero { min-height: 440px; }
+    .grid, .split { grid-template-columns: 1fr; gap: 36px; }
+    .journal-head { flex-direction: column; align-items: flex-start; gap: 0; }
+    .frames { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    nav a:not(:first-child) { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .overlay { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">TOKYO.</a>
+    <nav aria-label="Main">
+      <a href="#discover">Discover</a>
+      <a href="#neighborhoods">Neighborhoods</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A visual journey through Japan</p>
+    <h1>A City of<br>Contrasts.</h1>
+    <div class="rule"></div>
+    <p>Quiet temples, electric streets, and little moments in between. Discover a different side of Tokyo.</p>
+  </div>
+</section>
+
+<section class="discover" id="discover">
+  <div class="wrap">
+    <p class="section-label">01 / Discover</p>
+    <h2>Where tradition meets tomorrow.</h2>
+    <div class="grid">
+      <div>
+        <h3>More than a destination</h3>
+        <p>Tokyo is a city that never stops surprising you. One moment, you are surrounded by bright signs and busy crossings. A few streets away, you might discover a quiet shrine hidden between modern buildings.</p>
+        <p>What makes Tokyo special is the way old and new exist side by side. Every neighborhood has its own rhythm, atmosphere, and story to tell.</p>
+        <blockquote>“The best way to explore Tokyo is to get a little lost.”</blockquote>
+      </div>
+      <div class="photo" role="img" aria-label="Neon-lit street crossing in Tokyo"></div>
+    </div>
+  </div>
+</section>
+
+<section class="neighborhoods" id="neighborhoods">
+  <div class="wrap">
+    <p class="section-label">02 / Neighborhoods</p>
+    <h2>Slow down. Look closer.</h2>
+    <div class="split">
+      <div class="photo-lg" role="img" aria-label="A quiet old street with a pagoda at dusk"></div>
+      <div>
+        <h3>The quieter side</h3>
+        <p>Beyond the crowded stations and famous landmarks, Tokyo is full of peaceful corners. Small cafés, traditional shops, and narrow streets invite visitors to take their time.</p>
+        <p>Spend an afternoon walking without a strict plan. Notice the details: wooden doors, warm lanterns, tiny gardens, and the everyday life happening all around you.</p>
+        <p>Sometimes the most memorable places are the ones you never planned to visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="journal" id="gallery">
+  <div class="wrap">
+    <p class="section-label">03 / Photo Journal</p>
+    <div class="journal-head">
+      <h2>Tokyo in three frames.</h2>
+      <p>Move your mouse over each photograph to reveal the story behind the image.</p>
+    </div>
+    <div class="frames">
+      <figure class="frame" tabindex="0" aria-label="Evening traffic between towers">
+        <div class="overlay">
+          <h4>Rush hour</h4>
+          <p>Headlights and glass towers at the end of a long day.</p>
+        </div>
+      </figure>
+      <figure class="frame" tabindex="0" aria-label="The city and mountains at dusk">
+        <div class="overlay">
+          <h4>Above it all</h4>
+          <p>From a hillside, the city fades into the mountains.</p>
+        </div>
+      </figure>
+      <figure class="frame" tabindex="0" aria-label="A red lantern in a night alley">
+        <div class="overlay">
+          <h4>After dark</h4>
+          <p>A red lantern marks the way into a narrow alley.</p>
+        </div>
+      </figure>
+    </div>
+    <p class="hint">Hover over a photo to see the fade-in overlay effect</p>
+  </div>
+</section>
+
+</body>
+</html>
