@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVE｜獲獎紀錄</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <a class="logo" href="index.html">IVE.</a>
+        <nav aria-label="主要導覽">
+            <a href="index.html">首頁</a>
+            <a href="members.html">成員介紹</a>
+            <a href="albums.html">作品集</a>
+            <a href="awards.html" class="active" aria-current="page">獲獎紀錄</a>
+            <a href="gallery.html">圖片集</a>
+        </nav>
+    </header>
+    <main>
+        <div class="page-title">
+            <p class="small-title">DIVE INTO IVE</p>
+            <h1>The milestones</h1>
+            <p>每一座獎，都記錄著努力與陪伴。</p>
+        </div>
+        <p>整理出道後在主要音樂頒獎典禮獲得的獎項，依頒獎年份排列。僅列已獲獎項，不將提名計入；本頁為主要紀錄整理，不宣稱涵蓋所有品牌票選、個人獎項或音樂節目一位。</p>
+        <div class="filter-box">
+            <label for="awardYear">選擇年份：</label>
+            <select id="awardYear" onchange="filterAwards()">
+                <option value="all">全部年份</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+            <p id="awardResult" class="small-text" aria-live="polite">顯示 32 筆頒獎活動紀錄。</p>
+        </div>
+        <div class="table-box">
+            <table id="awardTable">
+                <caption>IVE 主要獲獎紀錄（資料截至 2026/11/16）</caption>
+                <thead><tr><th scope="col">年份</th><th scope="col">獲獎活動</th><th scope="col">獲獎名稱／作品</th><th scope="col">資料來源</th></tr></thead>
+                <tbody>
+                    <tr data-year="2022"><td>2022</td><td>Hanteo Music Awards（2021 年度）</td><td><ul><li>女子新人獎</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>The Fact Music Awards</td><td><ul><li>年度藝人本賞</li><li>Next Leader 新人獎</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>Genie Music Awards</td><td><ul><li>最佳女子新人</li><li>Best Style</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>MAMA Awards</td><td><ul><li>年度歌曲大賞 — LOVE DIVE</li><li>最佳女子新人</li><li>Favorite New Artist</li><li>最佳女子團體舞蹈表演 — LOVE DIVE</li></ul></td><td><a href="https://mama.mnetplus.world/history/2022/winners" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>Melon Music Awards</td><td><ul><li>年度歌曲大賞 — LOVE DIVE</li><li>年度新人</li><li>最佳女子團體</li><li>Top 10 藝人</li></ul></td><td><a href="https://www.melon.com/mma/result.htm?mmaYear=2022" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>Asia Artist Awards</td><td><ul><li>年度歌曲大賞 — LOVE DIVE</li><li>年度新人（歌手）</li><li>Hot Trend（歌手）</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2022"><td>2022</td><td>MTV Video Music Awards Japan</td><td><ul><li>Best Buzz Award</li></ul></td><td><a href="https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Ive" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>第 37 屆 Golden Disc Awards</td><td><ul><li>數位音源大賞 — LOVE DIVE</li><li>數位音源本賞 — LOVE DIVE</li><li>新人獎</li></ul></td><td><a href="https://www.soompi.com/article/1561876wpp/winners-of-the-37th-golden-disc-awards" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>第 32 屆 Seoul Music Awards</td><td><ul><li>最佳音源 — LOVE DIVE</li><li>本賞</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>第 12 屆 Circle Chart Music Awards（2022 年度）</td><td><ul><li>全球數位音樂年度歌手（12 月）— ELEVEN</li><li>全球數位音樂年度歌手（4 月）— LOVE DIVE</li><li>實體專輯年度新人 — After LIKE</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>第 37 屆 Japan Gold Disc Awards</td><td><ul><li>亞洲年度新人</li><li>亞洲 Best 3 新人</li></ul></td><td><a href="https://www.golddisc.jp/award/37/best-new-artist12.html" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>The Fact Music Awards</td><td><ul><li>年度藝人本賞</li><li>World Best Performer</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>Melon Music Awards</td><td><ul><li>年度專輯大賞 — I&#x27;ve IVE</li><li>Top 10 藝人</li><li>Millions Top 10 — I&#x27;ve IVE</li></ul></td><td><a href="https://www.melon.com/mma/result.htm?mmaYear=2023" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2023"><td>2023</td><td>Asia Artist Awards</td><td><ul><li>Best Artist（歌手）</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>第 38 屆 Golden Disc Awards</td><td><ul><li>專輯本賞 — I&#x27;VE MINE</li><li>數位音源本賞 — I AM</li></ul></td><td><a href="https://www.soompi.com/article/1635576wpp/winners-of-the-golden-disc-awards-2024" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>第 13 屆 Circle Chart Music Awards（2023 年度）</td><td><ul><li>年度歌手：數位音源 — I AM</li><li>年度歌手：全球串流 — I AM</li><li>年度歌手：串流獨立聽眾 — I AM</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>第 31 屆 Hanteo Music Awards（2023 年度）</td><td><ul><li>最佳歌曲大賞 — I AM</li><li>年度藝人本賞</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>第 33 屆 Seoul Music Awards</td><td><ul><li>本賞</li></ul></td><td><a href="https://karchives.com/ive-awards/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>MAMA Awards</td><td><ul><li>Fans&#x27; Choice 女子 Top 10</li><li>Favorite Global Performer（女子）</li><li>CJ Global Performance</li></ul></td><td><a href="https://cjenm.com/en/news/2024-mama-awards-wrap-up-historic-run-with-iconic-performances-and-milestone-moments/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2024"><td>2024</td><td>Melon Music Awards</td><td><ul><li>年度音樂錄影帶 — HEYA</li><li>Global Artist（女子）</li><li>Millions Top 10 — IVE SWITCH</li></ul></td><td><a href="https://www.melon.com/mma/result.htm?mmaYear=2024" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>第 39 屆 Golden Disc Awards</td><td><ul><li>專輯本賞 — IVE SWITCH</li><li>數位音源本賞 — HEYA</li><li>Global K-pop Artist</li></ul></td><td><a href="https://world.kbs.co.kr/service/contents_view.htm?board_code=&amp;board_seq=455203&amp;id=&amp;lang=k&amp;menu_cate=enternews&amp;page=59" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>Asia Star Entertainer Awards</td><td><ul><li>The Platinum 本賞</li></ul></td><td><a href="https://www.asea.kr/en/winner/2025" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>第 34 屆 Seoul Music Awards</td><td><ul><li>本賞</li></ul></td><td><a href="https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Ive" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>The Fact Music Awards</td><td><ul><li>Sound of the Year 大賞</li><li>年度藝人本賞</li></ul></td><td><a href="https://enews.imbc.com/News/RetrieveNewsInfo/477384" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>Korea Grand Music Awards</td><td><ul><li>Grand Song 大賞 — REBEL HEART</li><li>Best Music 10 — IVE SECRET</li><li>ENA K-pop Artist</li><li>Best Global K-pop Star</li></ul></td><td><a href="https://enews.imbc.com/News/RetrieveNewsInfo/484129" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>MAMA Awards</td><td><ul><li>Favorite Female Group</li><li>Favorite Global Performer</li><li>Global Trend Song — REBEL HEART</li></ul></td><td><a href="https://www.cjenm.com/en/news/2025-mama-awards-demonstrates-musics-power-to-heal-and-unite-in-moving-two-nights-performances/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>Melon Music Awards</td><td><ul><li>最佳女子團體</li><li>Top 10 藝人</li><li>Millions Top 10 — IVE EMPATHY</li></ul></td><td><a href="https://www.melon.com/mma/result.htm?mmaYear=2025" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2025"><td>2025</td><td>Asia Artist Awards</td><td><ul><li>年度歌曲大賞 — REBEL HEART</li><li>Best Artist（歌手）</li><li>Best K-pop Record</li></ul></td><td><a href="https://www.asiaartistawards.com/en/winners" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2026"><td>2026</td><td>第 40 屆 Golden Disc Awards</td><td><ul><li>專輯本賞 — IVE EMPATHY</li><li>數位音源本賞 — REBEL HEART</li><li>Cosmopolitan Artist Award</li></ul></td><td><a href="https://www.mk.co.kr/en/musics/11929431" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2026"><td>2026</td><td>Asia Star Entertainer Awards</td><td><ul><li>The Platinum 本賞</li></ul></td><td><a href="https://www.soompi.com/article/1841651wpp/winners-of-the-asia-star-entertainer-awards-asea-2026-day-1" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2026"><td>2026</td><td>Korea Grand Music Awards</td><td><ul><li>Best Music</li><li>Best Trend Setter</li></ul></td><td><a href="https://www.soompi.com/article/1885017wpp/winners-of-2026-korea-grand-music-awards-music-day" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                    <tr data-year="2026"><td>2026</td><td>Melon Music Awards</td><td><ul><li>年度歌曲大賞 — BANG BANG</li><li>最佳女子團體</li><li>年度音樂錄影帶 — BANG BANG</li><li>Top 10 藝人</li><li>Global Top 10</li></ul></td><td><a href="https://www.chosun.com/english/kpop-culture-en/2026/11/16/SBAR3GJBBFBD3I4F4DZMLHJ5EA/" target="_blank" rel="noopener noreferrer">查看來源 ↗</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note">大賞（Daesang）與本賞（Bonsang）是不同獎項。例如 2026 金唱片獎列出的專輯與音源獎是本賞，沒有將其誤寫為大賞。部分典禮的「年度」與舉辦年份不同，已在活動名稱中補充。</p>
+        <p class="source">2026 MMA 的年度歌曲、最佳女子團體、MV 與 Top 10 可另參考 <a href="https://www.melon.com/mma/result.htm?mmaYear=2026" target="_blank" rel="noopener noreferrer">Melon 官方得獎名單</a>；Global Top 10 依該活動新聞報導補列。</p>
+    </main>
+    <footer>
+        <p>MADE BY ELVA ZHANG</p>
+        <p><a href="#top">回到頂端 ↑</a></p>
+    </footer>
+</body>
+</html>

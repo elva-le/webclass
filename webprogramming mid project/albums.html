@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVE｜作品集</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <a class="logo" href="index.html">IVE.</a>
+        <nav aria-label="主要導覽">
+            <a href="index.html">首頁</a>
+            <a href="members.html">成員介紹</a>
+            <a href="albums.html" class="active" aria-current="page">作品集</a>
+            <a href="awards.html">獲獎紀錄</a>
+            <a href="gallery.html">圖片集</a>
+        </nav>
+    </header>
+    <main>
+        <div class="page-title">
+            <p class="small-title">DIVE INTO IVE</p>
+            <h1>The discography</h1>
+            <p>從 ELEVEN 開始，一首一首認識 IVE。</p>
+        </div>
+        <p>依發行時間排列，共 15 張正式專輯、EP 與單曲專輯，另補充 8 首數位單曲。同一作品的不同封面不重複列出，已收錄專輯的先行曲、混音與加速版本也不重複計算。</p>
+        <div class="filter-box">
+            <label for="albumType">作品分類：</label>
+            <select id="albumType" onchange="filterAlbums()">
+                <option value="all">全部作品</option>
+                <option value="kr">韓國專輯</option>
+                <option value="jp">日本專輯</option>
+                <option value="digital">數位單曲</option>
+            </select>
+            <label for="albumSearch">搜尋：</label>
+            <input id="albumSearch" type="search" placeholder="輸入專輯或歌曲名稱" oninput="filterAlbums()">
+            <p id="albumResult" class="small-text" aria-live="polite">顯示全部 23 部作品。</p>
+        </div>
+        <p class="small-text">點選歌曲旁的連結可前往收聽頁。Apple Music 的完整播放依地區與訂閱狀態提供；尚未找到可核對的歌曲頁時，改附官方 YouTube 搜尋連結。</p>
+        <div id="albumList">
+            <section class="album" data-type="kr">
+                <img src="images/album-19.jpg" alt="ELEVEN 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2021/12/01 / 韓國單曲專輯</p>
+                    <h2>ELEVEN</h2>
+                    <ol class="track-list">
+                        <li>ELEVEN <span class="listen"><a href="https://music.apple.com/us/album/eleven/1597404250?i=1597404252&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Take It <span class="listen"><a href="https://music.apple.com/us/album/take-it/1597404250?i=1597404253&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4932&amp;id=154826" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-18.jpg" alt="LOVE DIVE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2022/04/05 / 韓國單曲專輯</p>
+                    <h2>LOVE DIVE</h2>
+                    <ol class="track-list">
+                        <li>LOVE DIVE <span class="listen"><a href="https://music.apple.com/us/album/love-dive/1616804151?i=1616804152&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>ROYAL <span class="listen"><a href="https://music.apple.com/us/album/royal/1616804151?i=1616804153&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4932&amp;id=156860" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-17.jpg" alt="After LIKE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2022/08/22 / 韓國單曲專輯</p>
+                    <h2>After LIKE</h2>
+                    <ol class="track-list">
+                        <li>After LIKE <span class="listen"><a href="https://music.apple.com/us/album/after-like/1639416895?i=1639416903&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>My Satisfaction <span class="listen"><a href="https://music.apple.com/us/album/my-satisfaction/1639416895?i=1639416913&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4932&amp;id=196802" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="jp">
+                <img src="images/album-16.jpg" alt="ELEVEN -Japanese ver.- 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2022/10/19 / 日本單曲專輯</p>
+                    <h2>ELEVEN -Japanese ver.-</h2>
+                    <ol class="track-list">
+                        <li>ELEVEN -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/eleven-japanese-version/1649467561?i=1649467571&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Queen of Hearts <span class="listen"><a href="https://music.apple.com/us/album/queen-of-hearts/1649467561?i=1649467575&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4932&amp;id=197538" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-20.jpg" alt="LOVE DIVE –Japanese ver.- 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2023/1/16 / 數位單曲</p>
+                    <h2>LOVE DIVE –Japanese ver.-</h2>
+                    <ol class="track-list">
+                        <li>LOVE DIVE -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/love-dive-japanese-version/1661336207?i=1661336216&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4956&amp;id=222446" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-15.jpg" alt="I&#x27;ve IVE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2023/4/10 / 韓國正規專輯</p>
+                    <h2>I&#x27;ve IVE</h2>
+                    <ol class="track-list">
+                        <li>Blue Blood <span class="listen"><a href="https://music.apple.com/us/album/blue-blood/1680047093?i=1680047357&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>I AM <span class="listen"><a href="https://music.apple.com/us/album/i-am/1680047093?i=1680047366&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Kitsch <span class="listen"><a href="https://music.apple.com/us/album/kitsch/1680047093?i=1680047537&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Lips <span class="listen"><a href="https://music.apple.com/us/album/lips/1680047093?i=1680047542&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Heroine <span class="listen"><a href="https://music.apple.com/us/album/heroine/1680047093?i=1680047554&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Mine <span class="listen"><a href="https://music.apple.com/us/album/mine/1680047093?i=1680047726&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Hypnosis <span class="listen"><a href="https://music.apple.com/us/album/hypnosis/1680047093?i=1680047738&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>NOT YOUR GIRL <span class="listen"><a href="https://music.apple.com/us/album/not-your-girl/1680047093?i=1680048020&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Next Page <span class="listen"><a href="https://music.apple.com/us/album/next-page/1680047093?i=1680048030&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Cherish <span class="listen"><a href="https://music.apple.com/us/album/cherish/1680047093?i=1680048040&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Shine With Me <span class="listen"><a href="https://music.apple.com/us/album/shine-with-me/1680047093?i=1680048343&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=258273" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="jp">
+                <img src="images/album-14.jpg" alt="WAVE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2023/5/31 / 日本 EP</p>
+                    <h2>WAVE</h2>
+                    <ol class="track-list">
+                        <li>WAVE <span class="listen"><a href="https://music.apple.com/us/album/wave/1685789440?i=1685789441&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Classic <span class="listen"><a href="https://music.apple.com/us/album/classic/1685789440?i=1685789442&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>After LIKE -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/after-like-japanese-version/1685789440?i=1685789443&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>LOVE DIVE -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/love-dive-japanese-version/1685789440?i=1685789444&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Take It -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/take-it-japanese-version/1685789440?i=1685789445&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=236805" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-13.jpg" alt="I WANT 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2023/7/13 / 數位單曲</p>
+                    <h2>I WANT</h2>
+                    <ol class="track-list">
+                        <li>I WANT <span class="listen"><a href="https://music.apple.com/us/album/i-want/1697073400?i=1697073401&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=258272" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-12.jpg" alt="I&#x27;VE MINE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2023/10/13 / 韓國 EP</p>
+                    <h2>I&#x27;VE MINE</h2>
+                    <ol class="track-list">
+                        <li>Baddie <span class="listen"><a href="https://music.apple.com/us/album/baddie/1709569466?i=1709569470&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Off The Record <span class="listen"><a href="https://music.apple.com/us/album/off-the-record/1709569466?i=1709569468&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Either Way <span class="listen"><a href="https://music.apple.com/us/album/either-way/1709569466?i=1709569472&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Holy Moly <span class="listen"><a href="https://music.apple.com/us/album/holy-moly/1709569466?i=1709569476&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>OTT <span class="listen"><a href="https://music.apple.com/us/album/ott/1709569466?i=1709569480&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Payback <span class="listen"><a href="https://music.apple.com/us/album/payback/1709569466?i=1709569706&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=252457" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-11.jpg" alt="All Night 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/1/19 / 數位單曲</p>
+                    <h2>All Night</h2>
+                    <ol class="track-list">
+                        <li>All Night (feat. Saweetie) <span class="listen"><a href="https://music.apple.com/us/album/all-night/1725388347?i=1725388355&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=264206" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-10.jpg" alt="Will 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/4/12 / 數位單曲</p>
+                    <h2>Will</h2>
+                    <ol class="track-list">
+                        <li>Will <span class="listen"><a href="https://music.apple.com/us/album/will/1738429597?i=1738430009&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=267571" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-9.jpg" alt="IVE SWITCH 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/4/29 / 韓國 EP</p>
+                    <h2>IVE SWITCH</h2>
+                    <ol class="track-list">
+                        <li>해야 (HEYA) <span class="listen"><a href="https://music.apple.com/us/album/heya/1741070979?i=1741071167&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Accendio <span class="listen"><a href="https://music.apple.com/us/album/accendio/1741070979?i=1741071186&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Blue Heart <span class="listen"><a href="https://music.apple.com/us/album/blue-heart/1741070979?i=1741071387&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Ice Queen <span class="listen"><a href="https://music.apple.com/us/album/ice-queen/1741070979?i=1741071500&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>WOW <span class="listen"><a href="https://music.apple.com/us/album/wow/1741070979?i=1741071502&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>RESET <span class="listen"><a href="https://music.apple.com/us/album/reset/1741070979?i=1741071523&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=268757" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/extra-1753673713.jpg" alt="SUMMER FESTA 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/06/28 / 數位單曲</p>
+                    <h2>SUMMER FESTA</h2>
+                    <ol class="track-list">
+                        <li>SUMMER FESTA <span class="listen"><a href="https://music.apple.com/us/album/summer-festa/1753673713?i=1753673714&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://music.apple.com/us/album/summer-festa-single/1753673713?uo=4" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="jp">
+                <img src="images/album-8.jpg" alt="ALIVE 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/8/28 / 日本 EP</p>
+                    <h2>ALIVE</h2>
+                    <ol class="track-list">
+                        <li>CRUSH <span class="listen"><a href="https://music.apple.com/us/album/crush/1763022300?i=1763022301&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Will <span class="listen"><a href="https://music.apple.com/us/album/will/1763022300?i=1763022304&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>I AM -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/i-am-japanese-version/1763022300?i=1763022305&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Off The Record -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/off-the-record-japanese-version/1763022300?i=1763022309&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Baddie -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/baddie-japanese-version/1763022300?i=1763022315&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="small-text">期間生產限定盤另收錄：Will (Anime Size) · <a href="https://www.youtube.com/c/IVEstarship/search?query=Will%20%28Anime%20Size%29" target="_blank" rel="noopener noreferrer">官方 YouTube 搜尋 ↗</a>。</p>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=276410" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/extra-1771372465.jpg" alt="Will -Korean ver.- 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2024/10/15 / 數位單曲</p>
+                    <h2>Will -Korean ver.-</h2>
+                    <ol class="track-list">
+                        <li>Will -Korean version- <span class="listen"><a href="https://music.apple.com/us/album/will-korean-version/1771372465?i=1771372474&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://music.apple.com/us/album/will-korean-ver-single/1771372465?uo=4" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-7.png" alt="IVE EMPATHY 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2025/2/3 / 韓國 EP</p>
+                    <h2>IVE EMPATHY</h2>
+                    <ol class="track-list">
+                        <li>REBEL HEART <span class="listen"><a href="https://music.apple.com/us/album/rebel-heart/1789740675?i=1789740677&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>FLU <span class="listen"><a href="https://music.apple.com/us/album/flu/1789740675?i=1789740678&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>You Wanna Cry <span class="listen"><a href="https://music.apple.com/us/album/you-wanna-cry/1789740675?i=1789741043&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Thank U <span class="listen"><a href="https://music.apple.com/us/album/thank-u/1789740675?i=1789741046&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>ATTITUDE <span class="listen"><a href="https://music.apple.com/us/album/attitude/1789740675?i=1789741053&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>TKO <span class="listen"><a href="https://music.apple.com/us/album/tko/1789740675?i=1789741059&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=294971" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-6.jpg" alt="DARE ME 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2025/4/21 / 數位單曲</p>
+                    <h2>DARE ME</h2>
+                    <ol class="track-list">
+                        <li>DARE ME <span class="listen"><a href="https://music.apple.com/us/album/dare-me/1807245048?i=1807245320&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=291661" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="jp">
+                <img src="images/album-5.png" alt="Be Alright 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2025/7/30 / 日本 EP</p>
+                    <h2>Be Alright</h2>
+                    <ol class="track-list">
+                        <li>Be Alright <span class="listen"><a href="https://music.apple.com/us/album/be-alright/1824398909?i=1824398910&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>DARE ME <span class="listen"><a href="https://music.apple.com/us/album/dare-me/1824398909?i=1824398911&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Accendio -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/accendio-japanese-version/1824398909?i=1824398915&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Blue Heart -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/blue-heart-japanese-version/1824398909?i=1824398919&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>WOW -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/wow-japanese-version/1824398909?i=1824398923&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=293785" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-4.jpg" alt="IVE SECRET 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2025/8/25 / 韓國 EP</p>
+                    <h2>IVE SECRET</h2>
+                    <ol class="track-list">
+                        <li>XOXZ <span class="listen"><a href="https://music.apple.com/us/album/xoxz/1831903462?i=1831903464&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Wild Bird <span class="listen"><a href="https://music.apple.com/us/album/wild-bird/1831903462?i=1831903467&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Dear, My Feelings <span class="listen"><a href="https://music.apple.com/us/album/dear-my-feelings/1831903462?i=1831903473&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>GOTCHA (Baddest Eros) <span class="listen"><a href="https://music.apple.com/us/album/gotcha-baddest-eros/1831903462?i=1831903596&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>♥beats <span class="listen"><a href="https://music.apple.com/us/album/beats/1831903462?i=1831903598&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Midnight Kiss <span class="listen"><a href="https://music.apple.com/us/album/midnight-kiss/1831903462?i=1831903601&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=294972" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-3.jpg" alt="REVIVE+ 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2026/2/23 / 韓國正規專輯</p>
+                    <h2>REVIVE+</h2>
+                    <ol class="track-list">
+                        <li>BLACKHOLE <span class="listen"><a href="https://music.apple.com/us/album/blackhole/1873882195?i=1873882200&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>BANG BANG <span class="listen"><a href="https://music.apple.com/us/album/bang-bang/1873882195?i=1873882204&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Hush <span class="listen"><a href="https://music.apple.com/us/album/hush/1873882195?i=1873882207&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Stuck In Your Head <span class="listen"><a href="https://music.apple.com/us/album/stuck-in-your-head/1873882195?i=1873882209&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Fireworks <span class="listen"><a href="https://music.apple.com/us/album/fireworks/1873882195?i=1873882212&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>HOT COFFEE <span class="listen"><a href="https://music.apple.com/us/album/hot-coffee/1873882195?i=1873882214&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>8 (JANGWONYOUNG Solo) <span class="listen"><a href="https://music.apple.com/us/album/8-jangwonyoung-solo/1873882195?i=1873882427&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Odd (GAEUL Solo) <span class="listen"><a href="https://music.apple.com/us/album/odd-gaeul-solo/1873882195?i=1873882428&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Super ICY (LEESEO Solo) <span class="listen"><a href="https://music.apple.com/us/album/super-icy-leeseo-solo/1873882195?i=1873882442&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Unreal (LIZ Solo) <span class="listen"><a href="https://music.apple.com/us/album/unreal-liz-solo/1873882195?i=1873882447&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>In Your Heart (REI Solo) <span class="listen"><a href="https://music.apple.com/us/album/in-your-heart-rei-solo/1873882195?i=1873882449&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Force (ANYUJIN Solo) <span class="listen"><a href="https://music.apple.com/us/album/force-anyujin-solo/1873882195?i=1873882450&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=303477" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="digital">
+                <img src="images/album-2.jpg" alt="Fashion 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2026/4/3 / 數位單曲</p>
+                    <h2>Fashion</h2>
+                    <ol class="track-list">
+                        <li>Fashion <span class="listen"><a href="https://music.apple.com/us/album/fashion/1887487297?i=1887487303&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=303478" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="jp">
+                <img src="images/album-1.jpg" alt="LUCID DREAM 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2026/5/27 / 日本 EP</p>
+                    <h2>LUCID DREAM</h2>
+                    <ol class="track-list">
+                        <li>LUCID DREAM <span class="listen"><a href="https://music.apple.com/us/album/lucid-dream/6768866474?i=6768866475&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Fashion <span class="listen"><a href="https://music.apple.com/us/album/fashion/6768866474?i=6768866477&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>JIGSAW <span class="listen"><a href="https://music.apple.com/us/album/jigsaw/6768866474?i=6768866478&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>REBEL HEART -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/rebel-heart-japanese-version/6768866474?i=6768866479&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>ATTITUDE -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/attitude-japanese-version/6768866474?i=6768866480&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Thank U -Japanese ver.- <span class="listen"><a href="https://music.apple.com/us/album/thank-u-japanese-version/6768866474?i=6768866484&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=308216" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+            <section class="album" data-type="kr">
+                <img src="images/album-0.jpg" alt="Looks Can Kill 專輯／單曲封面" loading="lazy">
+                <div>
+                    <p class="small-title">2026/10/26 / 韓國 EP</p>
+                    <h2>Looks Can Kill</h2>
+                    <ol class="track-list">
+                        <li>Looks Can Kill <span class="listen"><a href="https://music.apple.com/us/album/looks-can-kill/6822369065?i=6822369089&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Mirror Mirror <span class="listen"><a href="https://music.apple.com/us/album/mirror-mirror/6827985601?i=6827985611&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>SNAKESKIN <span class="listen"><a href="https://music.apple.com/us/album/snakeskin/6827985601?i=6827985612&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>CRUMBS <span class="listen"><a href="https://music.apple.com/us/album/crumbs/6827985601?i=6827985614&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Girls Girls Girls <span class="listen"><a href="https://music.apple.com/us/album/girls-girls-girls/6827985601?i=6827985892&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                        <li>Glow Motion <span class="listen"><a href="https://music.apple.com/us/album/glow-motion/6827985601?i=6827985894&amp;uo=4" target="_blank" rel="noopener noreferrer">Apple Music ↗</a></span></li>
+                    </ol>
+                    <p class="source"><a href="https://ive-official.jp/mob/news/diarKijiShw.php?site=DIVE&amp;ima=4831&amp;id=310233" target="_blank" rel="noopener noreferrer">發行資料與曲目來源 ↗</a></p>
+                </div>
+            </section>
+        </div>
+        <p class="source">After LIKE 日期採 <a href="https://www.starship-ent.com/musician/ive" target="_blank" rel="noopener noreferrer">STARSHIP 韓國首發資料</a>，其餘主目錄依 <a href="https://ive-official.jp/mob/news/diarKiji.php?site=DIVE&amp;cd=DISCOGRAPHY" target="_blank" rel="noopener noreferrer">IVE 官方作品目錄</a>。歌曲連結依 Apple Music 發行頁核對。</p>
+    </main>
+    <footer>
+        <p>MADE BY ELVA ZHANG</p>
+        <p><a href="#top">回到頂端 ↑</a></p>
+    </footer>
+</body>
+</html>

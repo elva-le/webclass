@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVE｜圖片集</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <a class="logo" href="index.html">IVE.</a>
+        <nav aria-label="主要導覽">
+            <a href="index.html">首頁</a>
+            <a href="members.html">成員介紹</a>
+            <a href="albums.html">作品集</a>
+            <a href="awards.html">獲獎紀錄</a>
+            <a href="gallery.html" class="active" aria-current="page">圖片集</a>
+        </nav>
+    </header>
+    <main>
+        <div class="page-title">
+            <p class="small-title">DIVE INTO IVE</p>
+            <h1>IVE in frames</h1>
+            <p>九張團體照，收藏一起走過的時刻。</p>
+        </div>
+        <p>把舞台、紅毯與活動中的瞬間鋪成一面照片牆。滑鼠移到照片上可看標題，點選照片可放大；手機直接點選即可。</p>
+        <!-- 參考 week7_work.html 的 frames 與 overlay：多欄排圖、移入顯示文字 -->
+        <div class="gallery">
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-1.jpg', '2023 · Music Bank')" aria-label="放大照片：2023 · Music Bank">
+                    <img src="images/group-1.jpg" alt="IVE (아이브) on the way to Music Bank - October 13, 2023 (4).jpg" loading="lazy">
+                    <span class="overlay">2023 · Music Bank<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2023 · Music Bank<br><span class="credit">티비텐 TV10 · <a href="https://commons.wikimedia.org/wiki/File:IVE_(%EC%95%84%EC%9D%B4%EB%B8%8C)_on_the_way_to_Music_Bank_-_October_13,_2023_(4).jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-2.jpg', '2023 · MMA 紅毯')" aria-label="放大照片：2023 · MMA 紅毯">
+                    <img src="images/group-2.jpg" alt="2023 MMA IVE.jpg" loading="lazy">
+                    <span class="overlay">2023 · MMA 紅毯<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2023 · MMA 紅毯<br><span class="credit">티비텐 · <a href="https://commons.wikimedia.org/wiki/File:2023_MMA_IVE.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-3.jpg', '2023 · MMA 合照')" aria-label="放大照片：2023 · MMA 合照">
+                    <img src="images/group-3.jpg" alt="2023 MMA IVE 2.jpg" loading="lazy">
+                    <span class="overlay">2023 · MMA 合照<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2023 · MMA 合照<br><span class="credit">K-POPIT 케이팝잇 · <a href="https://commons.wikimedia.org/wiki/File:2023_MMA_IVE_2.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-4.jpg', '2022 · Music Bank')" aria-label="放大照片：2022 · Music Bank">
+                    <img src="images/group-4.jpg" alt="IVE Music Bank 2022.jpg" loading="lazy">
+                    <span class="overlay">2022 · Music Bank<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2022 · Music Bank<br><span class="credit">K-POPIT 케이팝잇 · <a href="https://commons.wikimedia.org/wiki/File:IVE_Music_Bank_2022.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-5.jpg', '2022 · 出發前往 KPOP.FLEX')" aria-label="放大照片：2022 · 出發前往 KPOP.FLEX">
+                    <img src="images/group-5.jpg" alt="IVE KPOP FLEX to Frankfurt, Germany May 13, 2022.jpg" loading="lazy">
+                    <span class="overlay">2022 · 出發前往 KPOP.FLEX<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2022 · 出發前往 KPOP.FLEX<br><span class="credit">티비텐 TV10 · <a href="https://commons.wikimedia.org/wiki/File:IVE_KPOP_FLEX_to_Frankfurt,_Germany_May_13,_2022.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-6.jpg', '2024 · MMA 紅毯')" aria-label="放大照片：2024 · MMA 紅毯">
+                    <img src="images/group-6.jpg" alt="IVE 2024 MMA 1.jpg" loading="lazy">
+                    <span class="overlay">2024 · MMA 紅毯<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2024 · MMA 紅毯<br><span class="credit">10Asia · <a href="https://commons.wikimedia.org/wiki/File:IVE_2024_MMA_1.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-7.jpg', '2024 · MMA 合照')" aria-label="放大照片：2024 · MMA 合照">
+                    <img src="images/group-7.jpg" alt="IVE 2024 MMA 3.jpg" loading="lazy">
+                    <span class="overlay">2024 · MMA 合照<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2024 · MMA 合照<br><span class="credit">10Asia · <a href="https://commons.wikimedia.org/wiki/File:IVE_2024_MMA_3.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener noreferrer">CC BY 3.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-8.png', '2026 · 金唱片獎')" aria-label="放大照片：2026 · 金唱片獎">
+                    <img src="images/group-8.png" alt="Ive at the 2026 Golden Disc Awards.png" loading="lazy">
+                    <span class="overlay">2026 · 金唱片獎<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>2026 · 金唱片獎<br><span class="credit">https://www.youtube.com/@_TV10 · <a href="https://commons.wikimedia.org/wiki/File:Ive_at_the_2026_Golden_Disc_Awards.png" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></span></figcaption>
+            </figure>
+            <figure>
+                <button type="button" class="photo-button" onclick="showPhoto('images/group-9.jpg', 'Seattle · 演唱會舞台')" aria-label="放大照片：Seattle · 演唱會舞台">
+                    <img src="images/group-9.jpg" alt="Ive in Seattle.jpg" loading="lazy">
+                    <span class="overlay">Seattle · 演唱會舞台<small>點選放大 ＋</small></span>
+                </button>
+                <figcaption>Seattle · 演唱會舞台<br><span class="credit">David Lee · <a href="https://commons.wikimedia.org/wiki/File:Ive_in_Seattle.jpg" target="_blank" rel="noopener noreferrer">來源</a> · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></span></figcaption>
+            </figure>
+        </div>
+        <dialog id="photoDialog">
+            <button type="button" class="close-button" onclick="closePhoto()">關閉 ✕</button>
+            <img id="largePhoto" src="images/group-1.jpg" alt="放大的 IVE 團體照">
+            <p id="photoCaption"></p>
+        </dialog>
+        <p class="source">圖片來自 Wikimedia Commons，個別作者、來源與授權連結列於各圖下方。原圖未另行修圖；畫面依版面等比例縮放。</p>
+
+    </main>
+    <footer>
+        <p>MADE BY ELVA ZHANG</p>
+        <p><a href="#top">回到頂端 ↑</a></p>
+    </footer>
+</body>
+</html>
